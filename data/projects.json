@@ -1,0 +1,28 @@
+[
+  {
+    "id": "restaurantos",
+    "title": "RestaurantOS",
+    "description": "A real-time restaurant management system for five roles on the same shift — ordering, kitchen ops, fair assignment, delivery logistics, inventory integrity, and a salary engine, under the Ember brand.",
+    "thumbnail": "/images/restaurantos-thumb.png",
+    "hero": "/images/restaurantos-hero.png",
+    "images": [],
+    "tech": ["Next.js", "TypeScript", "Express", "PostgreSQL", "Prisma", "Pusher"],
+    "category": "Development",
+    "features": [
+      "Real-time ordering across customer, cook, service, delivery, and admin roles",
+      "Fair order assignment engine with pause detection and stale-order rotation",
+      "PhotoView visual table management on real restaurant photos",
+      "Atomic inventory with low-stock auto-hiding and delivery map integration",
+      "Salary engine with per-role scoring weights, bonuses, and month closure"
+    ],
+    "challenges": [
+      "Inventory race conditions under concurrent orders — solved with atomic Prisma updates guarded by quantityOnHand: { gte: requiredQty }.",
+      "Timezone bugs that silently corrupted salary data — fixed by an all-UTC backend converted only at display time.",
+      "Render free tier blocking SMTP — replaced with Brevo's HTTP API, and cron moved to an external job service."
+    ],
+    "status": "Live",
+    "url": "https://restaurantos-neon.vercel.app",
+    "github": null
+  }
+ 
+]
