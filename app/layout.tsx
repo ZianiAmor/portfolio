@@ -14,6 +14,11 @@ export const metadata: Metadata = {
     description: 'Building production-grade web applications',
     type: 'website',
   },
+  icons: {
+    icon: '/logo.svg',
+    shortcut: '/logo.svg',
+    apple: '/logo.svg',
+  },
 }
 
 export default function RootLayout({

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const navLinks = [
   { href: '#about', label: 'About' },
@@ -30,11 +31,23 @@ export default function Navbar() {
       }`}
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        {/* ─── Logo ─────────────────────────────────────────────── */}
         <Link
-          href="#"
-          className="text-lg font-semibold tracking-tight text-white"
+          href="/"
+          className="flex items-center gap-3 group"
+          aria-label="Ziani Amor – Home"
         >
-          ZA<span className="text-cyan-400">.</span>
+          <div className="w-8 h-8 md:w-9 md:h-9 relative">
+            <Image
+              src="/logo.svg"
+              alt="Ziani Amor"
+              width={36}
+              height={36}
+              className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200"
+              priority
+            />
+          </div>
+
         </Link>
 
         <ul className="hidden md:flex items-center gap-8 text-sm">
