@@ -16,7 +16,7 @@ const skillGroups: SkillGroup[] = [
     icon: '</>',
     color: 'bg-cyan-500/10 text-cyan-400',
     description:
-      'Building production-grade web applications with modern tools, from database design to pixel-perfect interfaces.',
+      'Building complete web applications — from database design and backend architecture to polished, responsive interfaces.',
     tags: [
       'React',
       'Next.js',
@@ -78,7 +78,7 @@ export default function Home() {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/5 bg-white/[0.02] text-xs text-slate-500 mb-6"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-            Open to collaborations
+            Open to opportunities & collaborations
           </motion.div>
 
           <motion.h1
@@ -96,7 +96,7 @@ export default function Home() {
             transition={{ delay: 0.5 }}
             className="mt-4 text-lg sm:text-xl md:text-2xl text-slate-400 font-light max-w-2xl mx-auto"
           >
-            Full-stack developer · Systems architect
+            Full-stack developer · Building real-time systems
           </motion.p>
 
           <motion.p
@@ -105,7 +105,7 @@ export default function Home() {
             transition={{ delay: 0.7 }}
             className="mt-2 text-sm sm:text-base text-slate-500 max-w-xl mx-auto leading-relaxed px-2"
           >
-            Building production-grade web applications with React, Next.js, Node.js, and TypeScript.
+            Crafting polished web experiences with React, Next.js, Node.js, and TypeScript.
           </motion.p>
 
           <motion.div
@@ -148,17 +148,19 @@ export default function Home() {
               className="md:col-span-3 space-y-5"
             >
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white leading-[1.15]">
-                Full-stack developer &<br />
-                <span className="gradient-text">systems architect.</span>
+                Building complete applications,<br />
+                <span className="gradient-text">from database to interface.</span>
               </h2>
               <p className="text-slate-400 leading-relaxed text-base sm:text-lg">
-                I'm a full-stack developer with over 3 years of experience shipping production-grade
-                software. I specialize in building web applications with React, Next.js, Node.js,
-                and TypeScript — from architecting backends to crafting polished frontends.
+                I'm a full-stack developer focused on building complete, real-world
+                applications — from backend architecture and database design to polished,
+                responsive frontend experiences.
               </p>
               <p className="text-slate-500 leading-relaxed text-sm">
-                Currently focused on full-stack development, real-time systems, and clean,
-                maintainable code.
+                I work primarily with React, Next.js, Node.js, TypeScript, and PostgreSQL,
+                with a particular interest in real-time systems, clean architecture, and
+                turning complex workflows into intuitive products. Currently expanding into
+                machine learning and data science alongside full-stack development.
               </p>
             </motion.div>
 
@@ -170,12 +172,15 @@ export default function Home() {
               className="md:col-span-2 grid grid-cols-2 gap-3 sm:gap-4"
             >
               {[
-                { value: '3+', label: 'Years Building' },
-                { value: '3+', label: 'Projects Shipped' },
-                { value: '2+', label: 'Production Apps' },
+                { value: 'Full-Stack', label: 'End-to-end' },
+                { value: 'Real-Time', label: 'Event-driven' },
+                { value: 'ML & Data', label: 'Expanding' },
+                { value: 'Clean', label: 'Architecture-first' },
               ].map((stat) => (
                 <div key={stat.label} className="glass-card p-5 sm:p-6 text-center">
-                  <div className="text-2xl font-bold gradient-text">{stat.value}</div>
+                  <div className="text-lg sm:text-xl font-bold gradient-text leading-tight">
+                    {stat.value}
+                  </div>
                   <div className="text-[0.65rem] uppercase tracking-wider text-slate-500 mt-1">
                     {stat.label}
                   </div>
@@ -229,14 +234,6 @@ export default function Home() {
             </h2>
           </motion.div>
 
-          {/*
-            Flex + justify-center instead of a fixed-column grid.
-            This centers correctly whether there's 1 project or 12 —
-            a grid centers items *inside* their column tracks, not the
-            tracks themselves, so a lone item in a 3-col grid sticks to
-            the left. Each card gets a fixed max width so it doesn't
-            stretch full-width on its own.
-          */}
           <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6">
             {projectsData.map((project, i) => (
               <div key={project.id} className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] max-w-sm">
